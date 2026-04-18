@@ -17,6 +17,7 @@ import { Route as GalerieRouteImport } from './routes/galerie'
 import { Route as DieFincaRouteImport } from './routes/die-finca'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
+import { Route as ApiContactRouteImport } from './routes/api/contact'
 import { Route as ApiAvailabilityRouteImport } from './routes/api/availability'
 import { Route as LovableEmailSuppressionRouteImport } from './routes/lovable/email/suppression'
 import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lovable/email/transactional/send'
@@ -63,6 +64,11 @@ const EmailUnsubscribeRoute = EmailUnsubscribeRouteImport.update({
   path: '/email/unsubscribe',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiContactRoute = ApiContactRouteImport.update({
+  id: '/api/contact',
+  path: '/api/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAvailabilityRoute = ApiAvailabilityRouteImport.update({
   id: '/api/availability',
   path: '/api/availability',
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
   '/api/availability': typeof ApiAvailabilityRoute
+  '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
   '/api/availability': typeof ApiAvailabilityRoute
+  '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
   '/api/availability': typeof ApiAvailabilityRoute
+  '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -149,6 +158,7 @@ export interface FileRouteTypes {
     | '/location'
     | '/preise'
     | '/api/availability'
+    | '/api/contact'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
     | '/location'
     | '/preise'
     | '/api/availability'
+    | '/api/contact'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
@@ -179,6 +190,7 @@ export interface FileRouteTypes {
     | '/location'
     | '/preise'
     | '/api/availability'
+    | '/api/contact'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
@@ -195,6 +207,7 @@ export interface RootRouteChildren {
   LocationRoute: typeof LocationRoute
   PreiseRoute: typeof PreiseRoute
   ApiAvailabilityRoute: typeof ApiAvailabilityRoute
+  ApiContactRoute: typeof ApiContactRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
   LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
@@ -260,6 +273,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EmailUnsubscribeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/contact': {
+      id: '/api/contact'
+      path: '/api/contact'
+      fullPath: '/api/contact'
+      preLoaderRoute: typeof ApiContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/availability': {
       id: '/api/availability'
       path: '/api/availability'
@@ -307,6 +327,7 @@ const rootRouteChildren: RootRouteChildren = {
   LocationRoute: LocationRoute,
   PreiseRoute: PreiseRoute,
   ApiAvailabilityRoute: ApiAvailabilityRoute,
+  ApiContactRoute: ApiContactRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
   LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
@@ -316,3 +337,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}

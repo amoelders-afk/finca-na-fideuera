@@ -29,15 +29,28 @@ function KontaktPage() {
     personen: "",
     nachricht: "",
   });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Anfrage Finca Na Fideuera");
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nE-Mail: ${form.email}\nReisezeitraum: ${form.von} bis ${form.bis}\nPersonen: ${form.personen}\n\nNachricht:\n${form.nachricht}`
-    );
-    window.location.href = `mailto:sarah.hofer0608@gmail.com?subject=${subject}&body=${body}`;
-    toast.success("Ihre E-Mail wird geöffnet");
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Senden fehlgeschlagen");
+      }
+      toast.success("Vielen Dank! Ihre Anfrage wurde gesendet.");
+      setForm({ name: "", email: "", von: "", bis: "", personen: "", nachricht: "" });
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Senden fehlgeschlagen");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const update = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
@@ -128,9 +141,10 @@ function KontaktPage() {
             </Field>
             <button
               type="submit"
-              className="justify-self-start inline-flex items-center gap-2 rounded-full bg-coral px-8 py-3 text-coral-foreground text-sm uppercase tracking-widest hover:bg-coral/90 transition-colors"
+              disabled={submitting}
+              className="justify-self-start inline-flex items-center gap-2 rounded-full bg-coral px-8 py-3 text-coral-foreground text-sm uppercase tracking-widest hover:bg-coral/90 transition-colors disabled:opacity-60"
             >
-              Senden
+              {submitting ? "Senden..." : "Senden"}
             </button>
           </form>
         </div>
