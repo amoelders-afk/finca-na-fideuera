@@ -24,7 +24,7 @@ function ImpressumPage() {
           <Row label="Spanische Steuernummer" value="Y1829912-T" />
           <Row label="Wohneinheiten" value="3 Wohneinheiten, 6 Plätze" />
           <Row label="Adresse" value="Polygon 17, Parzelle-la 125, Camí Son Boyet" />
-          <Row label="Kontakt" value="finca-na-fideuera@gmx.net" />
+          <Row label="Kontakt" value="sarah.hofer0608@gmail.com" />
         </dl>
       </div>
     </Section>

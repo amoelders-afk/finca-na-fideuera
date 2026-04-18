@@ -10,7 +10,7 @@ export const Route = createFileRoute("/kontakt")({
       {
         name: "description",
         content:
-          "Kontaktieren Sie die Finca Na Fideuera für eine unverbindliche Anfrage. E-Mail: finca-na-fideuera@gmx.net.",
+          "Kontaktieren Sie die Finca Na Fideuera für eine unverbindliche Anfrage. E-Mail: sarah.hofer0608@gmail.com.",
       },
       { property: "og:title", content: "Kontakt — Finca Na Fideuera" },
       { property: "og:description", content: "Unverbindliche Anfrage stellen." },
@@ -35,7 +35,7 @@ function KontaktPage() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nE-Mail: ${form.email}\nReisezeitraum: ${form.von} bis ${form.bis}\nPersonen: ${form.personen}\n\nNachricht:\n${form.nachricht}`
     );
-    window.location.href = `mailto:finca-na-fideuera@gmx.net?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:sarah.hofer0608@gmail.com?subject=${subject}&body=${body}`;
     toast.success("Ihre E-Mail wird geöffnet");
   };
 
@@ -55,9 +55,9 @@ function KontaktPage() {
           </div>
 
           <div className="border-t border-primary-foreground/20 pt-8 mb-12 flex items-center justify-between flex-wrap gap-4">
-            <span className="text-primary-foreground/70">finca-na-fideuera@gmx.net</span>
+            <span className="text-primary-foreground/70">sarah.hofer0608@gmail.com</span>
             <a
-              href="mailto:finca-na-fideuera@gmx.net"
+              href="mailto:sarah.hofer0608@gmail.com"
               className="inline-flex items-center gap-2 rounded-full bg-coral px-8 py-3 text-coral-foreground text-sm uppercase tracking-widest hover:bg-coral/90 transition-colors"
             >
               Hier
