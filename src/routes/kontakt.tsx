@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
+import { AvailabilityCalendar } from "@/components/availability-calendar";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
@@ -62,6 +63,10 @@ function KontaktPage() {
             >
               Hier
             </a>
+          </div>
+
+          <div className="mb-12">
+            <AvailabilityCalendar />
           </div>
 
           <form

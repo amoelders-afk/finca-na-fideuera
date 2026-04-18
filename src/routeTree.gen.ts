@@ -16,6 +16,7 @@ import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as GalerieRouteImport } from './routes/galerie'
 import { Route as DieFincaRouteImport } from './routes/die-finca'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiAvailabilityRouteImport } from './routes/api/availability'
 
 const PreiseRoute = PreiseRouteImport.update({
   id: '/preise',
@@ -52,6 +53,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAvailabilityRoute = ApiAvailabilityRouteImport.update({
+  id: '/api/availability',
+  path: '/api/availability',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
+  '/api/availability': typeof ApiAvailabilityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
+  '/api/availability': typeof ApiAvailabilityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
+  '/api/availability': typeof ApiAvailabilityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/location'
     | '/preise'
+    | '/api/availability'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/location'
     | '/preise'
+    | '/api/availability'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/location'
     | '/preise'
+    | '/api/availability'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +131,7 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   LocationRoute: typeof LocationRoute
   PreiseRoute: typeof PreiseRoute
+  ApiAvailabilityRoute: typeof ApiAvailabilityRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -172,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/availability': {
+      id: '/api/availability'
+      path: '/api/availability'
+      fullPath: '/api/availability'
+      preLoaderRoute: typeof ApiAvailabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -183,6 +203,7 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   LocationRoute: LocationRoute,
   PreiseRoute: PreiseRoute,
+  ApiAvailabilityRoute: ApiAvailabilityRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
