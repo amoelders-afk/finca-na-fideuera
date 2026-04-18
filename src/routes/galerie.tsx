@@ -6,6 +6,8 @@ import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
+import g7 from "@/assets/gallery-7.jpg";
+import g8 from "@/assets/gallery-8.jpg";
 import hero from "@/assets/hero-pool.jpg";
 import entrance from "@/assets/finca-entrance.jpg";
 
@@ -27,14 +29,16 @@ export const Route = createFileRoute("/galerie")({
 });
 
 const images = [
-  { src: hero, alt: "Pool­terrasse", span: "row-span-2" },
-  { src: g1, alt: "Wohnzimmer", span: "row-span-2" },
-  { src: g2, alt: "Schlafzimmer", span: "" },
-  { src: g3, alt: "Terrasse mit Grill", span: "" },
-  { src: g4, alt: "Pool", span: "" },
-  { src: g5, alt: "Küche", span: "row-span-2" },
-  { src: g6, alt: "Außenansicht", span: "" },
-  { src: entrance, alt: "Einfahrt", span: "" },
+  { src: hero, alt: "Finca mit Pool", span: "row-span-2" },
+  { src: g1, alt: "Pool und Sonnenliegen", span: "row-span-2" },
+  { src: g2, alt: "Sonnenliegen am Pool", span: "" },
+  { src: g3, alt: "Panoramablick mit Bergen", span: "" },
+  { src: g4, alt: "Garten und Pool", span: "" },
+  { src: g5, alt: "Hauseingang", span: "row-span-2" },
+  { src: g6, alt: "Schlafzimmer", span: "" },
+  { src: g7, alt: "Wohnzimmer mit Kamin", span: "" },
+  { src: g8, alt: "Badezimmer", span: "" },
+  { src: entrance, alt: "Einfahrt mit Tor", span: "" },
 ];
 
 function GaleriePage() {
