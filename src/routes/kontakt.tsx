@@ -65,6 +65,10 @@ function KontaktPage() {
             </a>
           </div>
 
+          <div className="mb-12">
+            <AvailabilityCalendar />
+          </div>
+
           <form
             onSubmit={handleSubmit}
             className="bg-background text-foreground rounded-sm p-8 md:p-12 grid gap-6"
