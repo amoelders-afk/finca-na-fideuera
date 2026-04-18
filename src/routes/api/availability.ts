@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import ICAL from "ical.js";
 
 const ICAL_URL =
-  "https://calendar.google.com/calendar/ical/f8a8ff49301650d-f340834630f5b9fb24c9ee8a-e09b337b3f98487712dc1f3d5%40group.calendar.google.com/private-2f94d394140-de21619c7e4cb85ad0918/basic.ics";
+  "https://calendar.google.com/calendar/ical/33d24fe357566ae72b4a090b3d7c7732a02bd8bba698fef7ee53f7a19f9d477d%40group.calendar.google.com/private-971afc75b4329a42b04fcd51873f4b6d/basic.ics";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
