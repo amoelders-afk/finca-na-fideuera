@@ -15,7 +15,6 @@ let cache: { data: { start: string; end: string; summary: string }[]; ts: number
 const CACHE_MS = 60 * 60 * 1000;
 
 export const Route = createFileRoute("/api/availability")({
-  // @ts-expect-error - server handlers supported at runtime by TanStack Start
   server: {
     handlers: {
       OPTIONS: async () =>
