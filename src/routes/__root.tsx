@@ -46,6 +46,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Finca Na Fideuera — Wohlfühlfinca auf Mallorca" },
+      { name: "description", content: "Finca Na Fideuera is a Mallorca vacation rental website showcasing property details and booking information." },
+      { property: "og:description", content: "Finca Na Fideuera is a Mallorca vacation rental website showcasing property details and booking information." },
+      { name: "twitter:description", content: "Finca Na Fideuera is a Mallorca vacation rental website showcasing property details and booking information." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ad0b0c63-05ab-4448-a8af-56c46d20f35a/id-preview-43198332--2a6da1b7-5f04-406c-9c12-57defa1a17b5.lovable.app-1776580409405.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ad0b0c63-05ab-4448-a8af-56c46d20f35a/id-preview-43198332--2a6da1b7-5f04-406c-9c12-57defa1a17b5.lovable.app-1776580409405.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
