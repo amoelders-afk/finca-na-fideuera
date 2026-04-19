@@ -44,18 +44,15 @@ type GalleryImage = {
 };
 
 const images: GalleryImage[] = [
-  { src: hero, alt: "Pool und Naturstein-Finca", caption: "Pool & Finca", category: "Pool" },
   { src: poolTerraceUmbrella, alt: "Pool­terrasse mit Sonnenschirm", caption: "Pool­terrasse", category: "Pool" },
   { src: facadeCypress, alt: "Naturstein-Finca mit Zypressen", caption: "Fassade mit Zypressen", category: "Außen" },
   { src: bedroomWoodBed, alt: "Schlafzimmer mit Massivholzbett", caption: "Schlafzimmer", category: "Innen" },
-  { src: stairsPool, alt: "Außentreppe mit Pool", caption: "Treppe & Pool", category: "Außen" },
   { src: poolLoungers, alt: "Sonnenliegen am Pool mit Strohschirmen", caption: "Sonnenliegen", category: "Pool" },
   { src: diningTableFireplace, alt: "Esstisch mit Kamin und Naturstein­wand", caption: "Esszimmer", category: "Innen" },
   { src: poolMountainsReeds, alt: "Pool mit Schilf, Zypressen und Bergblick", caption: "Pool mit Bergblick", category: "Pool" },
   { src: stoneCourtyard, alt: "Innenhof mit Naturstein-Wand und Holzläden", caption: "Innenhof", category: "Außen" },
   { src: bathroomShower, alt: "Bad mit Steinwaschbecken und Dusche", caption: "Bad mit Dusche", category: "Bad" },
   { src: kitchen, alt: "Voll ausgestattete Küche", caption: "Küche", category: "Innen" },
-  { src: poolMountainView, alt: "Pool mit Panorama-Bergblick", caption: "Panoramablick", category: "Pool" },
   { src: facadeShutters, alt: "Hausfassade mit Holzläden", caption: "Holzläden", category: "Außen" },
   { src: bathroomStoneSink, alt: "Badezimmer mit Steinwaschbecken", caption: "Steinwaschbecken", category: "Bad" },
   { src: stoneEntrance, alt: "Hauseingang mit Natursteinfassade", caption: "Eingang", category: "Außen" },
