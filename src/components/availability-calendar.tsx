@@ -75,7 +75,7 @@ export function AvailabilityCalendar() {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-    fetch("/api/availability")
+    fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/availability`)
       .then((r) => r.json())
       .then((d) => {
         if (d.error) setError(d.error);

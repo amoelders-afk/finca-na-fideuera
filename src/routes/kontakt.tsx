@@ -35,7 +35,7 @@ function KontaktPage() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

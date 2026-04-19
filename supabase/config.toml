@@ -1,1 +1,7 @@
 project_id = "pmlmkbswawxheixttoar"
+
+[functions.contact]
+verify_jwt = false
+
+[functions.availability]
+verify_jwt = false
