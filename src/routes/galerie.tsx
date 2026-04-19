@@ -18,6 +18,11 @@ import exteriorPoolCypress from "@/assets/finca-exterior-pool-cypress.jpg";
 import bedroomWoodBed from "@/assets/finca-bedroom-wood-bed.jpg";
 import diningTableFireplace from "@/assets/finca-dining-table-fireplace.jpg";
 import poolHouseEvening from "@/assets/finca-pool-house-evening.jpg";
+import poolReeds from "@/assets/finca-pool-reeds.jpg";
+import kitchen from "@/assets/finca-kitchen.jpg";
+import facadeShutters from "@/assets/finca-facade-shutters.jpg";
+import bathroomVanity from "@/assets/finca-bathroom-vanity.jpg";
+import bathroomTub from "@/assets/finca-bathroom-tub.jpg";
 
 export const Route = createFileRoute("/galerie")({
   head: () => ({
@@ -42,11 +47,16 @@ const images = [
   { src: poolLoungers, alt: "Pool mit Sonnenliegen und Strohschirmen", span: "row-span-2" },
   { src: exteriorPoolCypress, alt: "Naturstein-Finca mit Pool und Zypressen", span: "" },
   { src: poolHouseEvening, alt: "Finca und Pool in Abendstimmung", span: "row-span-2" },
+  { src: kitchen, alt: "Voll ausgestattete Küche", span: "" },
   { src: poolMountainView, alt: "Pool mit Blick auf die Berge", span: "" },
+  { src: facadeShutters, alt: "Hausfassade mit Holzläden", span: "row-span-2" },
   { src: stoneEntrance, alt: "Hauseingang mit Natursteinfassade", span: "" },
   { src: bedroomWoodBed, alt: "Schlafzimmer mit Holzbett", span: "row-span-2" },
   { src: diningTableFireplace, alt: "Esstisch mit Kamin und Steinwand", span: "" },
   { src: bathroomStoneSink, alt: "Badezimmer mit Steinwaschbecken", span: "" },
+  { src: bathroomVanity, alt: "Badezimmer mit Steinwaschtisch", span: "" },
+  { src: bathroomTub, alt: "Badezimmer mit Badewanne", span: "" },
+  { src: poolReeds, alt: "Pool mit Schilf und Sonnenliegen im Garten", span: "row-span-2" },
   { src: g2, alt: "Sonnenliegen am Pool", span: "" },
   { src: g3, alt: "Panoramablick mit Bergen", span: "" },
   { src: g4, alt: "Garten und Pool", span: "" },
