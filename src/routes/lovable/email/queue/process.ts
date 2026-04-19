@@ -1,4 +1,3 @@
-import { sendLovableEmail } from '@lovable.dev/email-js'
 import { createClient } from '@supabase/supabase-js'
 import { createFileRoute } from '@tanstack/react-router'
 
@@ -222,6 +221,7 @@ export const Route = createFileRoute("/lovable/email/queue/process")({
             }
 
             try {
+              const { sendLovableEmail } = await import('@lovable.dev/email-js')
               await sendLovableEmail(
                 {
                   run_id: payload.run_id,
