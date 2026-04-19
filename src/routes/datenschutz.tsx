@@ -113,7 +113,6 @@ function DatenschutzPage() {
             </p>
           </section>
 
-
           <section>
             <h2 className="text-2xl mb-3 text-teal">
               7. Ihre Rechte
