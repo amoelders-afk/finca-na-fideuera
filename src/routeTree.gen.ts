@@ -15,6 +15,7 @@ import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as GalerieRouteImport } from './routes/galerie'
 import { Route as DieFincaRouteImport } from './routes/die-finca'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
@@ -52,6 +53,11 @@ const GalerieRoute = GalerieRouteImport.update({
 const DieFincaRoute = DieFincaRouteImport.update({
   id: '/die-finca',
   path: '/die-finca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -100,6 +106,7 @@ const LovableEmailQueueProcessRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/die-finca': typeof DieFincaRoute
   '/galerie': typeof GalerieRoute
   '/impressum': typeof ImpressumRoute
@@ -116,6 +123,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/die-finca': typeof DieFincaRoute
   '/galerie': typeof GalerieRoute
   '/impressum': typeof ImpressumRoute
@@ -133,6 +141,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/die-finca': typeof DieFincaRoute
   '/galerie': typeof GalerieRoute
   '/impressum': typeof ImpressumRoute
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/datenschutz'
     | '/die-finca'
     | '/galerie'
     | '/impressum'
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/datenschutz'
     | '/die-finca'
     | '/galerie'
     | '/impressum'
@@ -183,6 +194,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/datenschutz'
     | '/die-finca'
     | '/galerie'
     | '/impressum'
@@ -200,6 +212,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DatenschutzRoute: typeof DatenschutzRoute
   DieFincaRoute: typeof DieFincaRoute
   GalerieRoute: typeof GalerieRoute
   ImpressumRoute: typeof ImpressumRoute
@@ -257,6 +270,13 @@ declare module '@tanstack/react-router' {
       path: '/die-finca'
       fullPath: '/die-finca'
       preLoaderRoute: typeof DieFincaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -320,6 +340,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DatenschutzRoute: DatenschutzRoute,
   DieFincaRoute: DieFincaRoute,
   GalerieRoute: GalerieRoute,
   ImpressumRoute: ImpressumRoute,
@@ -337,3 +358,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
