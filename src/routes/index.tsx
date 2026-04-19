@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-pool.jpg";
 import entranceImg from "@/assets/finca-entrance.jpg";
+import kitchenImg from "@/assets/finca-kitchen.jpg";
+import diningImg from "@/assets/finca-dining-table-fireplace.jpg";
 import artaImg from "@/assets/arta.jpg";
 import naturparkImg from "@/assets/naturpark.jpg";
 import calaRajadaImg from "@/assets/cala-rajada.jpg";
@@ -160,6 +162,26 @@ function HomePage() {
               height={1280}
             />
           </div>
+        </div>
+
+        {/* Innenleben Vorschau */}
+        <div className="mt-20 grid md:grid-cols-2 gap-6">
+          <img
+            src={diningImg}
+            alt="Esstisch mit Kamin und Naturstein­wand"
+            className="w-full h-[320px] object-cover rounded-sm"
+            loading="lazy"
+            width={1280}
+            height={853}
+          />
+          <img
+            src={kitchenImg}
+            alt="Geräumige, voll ausgestattete Küche"
+            className="w-full h-[320px] object-cover rounded-sm"
+            loading="lazy"
+            width={1280}
+            height={853}
+          />
         </div>
 
         <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 border-t border-border pt-12">
