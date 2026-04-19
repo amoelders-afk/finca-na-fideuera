@@ -113,16 +113,6 @@ function DatenschutzPage() {
             </p>
           </section>
 
-          <section>
-            <h2 className="text-2xl mb-3 text-teal">
-              7. E-Mail-Versand
-            </h2>
-            <p>
-              Anfragen aus dem Kontaktformular werden per E-Mail über
-              unseren Versanddienst übermittelt. Dabei werden Ihre Angaben
-              verschlüsselt übertragen.
-            </p>
-          </section>
 
           <section>
             <h2 className="text-2xl mb-3 text-teal">
