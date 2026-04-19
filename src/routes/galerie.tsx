@@ -1,33 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/section";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
-import g7 from "@/assets/gallery-7.jpg";
-import g8 from "@/assets/gallery-8.jpg";
 import hero from "@/assets/hero-pool.jpg";
-import entrance from "@/assets/finca-entrance.jpg";
 import poolLoungers from "@/assets/finca-pool-loungers.jpg";
-import stoneEntrance from "@/assets/finca-stone-entrance.jpg";
+import poolTerraceUmbrella from "@/assets/finca-pool-terrace-umbrella.jpg";
 import poolMountainView from "@/assets/finca-pool-mountain-view.jpg";
-import bathroomStoneSink from "@/assets/finca-bathroom-stone-sink.jpg";
-import exteriorPoolCypress from "@/assets/finca-exterior-pool-cypress.jpg";
+import poolMountainsReeds from "@/assets/finca-pool-mountains-reeds.jpg";
+import stairsPool from "@/assets/finca-stairs-pool.jpg";
+import facadeCypress from "@/assets/finca-facade-cypress.jpg";
+import facadeShutters from "@/assets/finca-facade-shutters.jpg";
+import stoneCourtyard from "@/assets/finca-stone-courtyard.jpg";
+import stoneEntrance from "@/assets/finca-stone-entrance.jpg";
+import entrance from "@/assets/finca-entrance.jpg";
 import bedroomWoodBed from "@/assets/finca-bedroom-wood-bed.jpg";
 import diningTableFireplace from "@/assets/finca-dining-table-fireplace.jpg";
-import poolHouseEvening from "@/assets/finca-pool-house-evening.jpg";
-import poolReeds from "@/assets/finca-pool-reeds.jpg";
 import kitchen from "@/assets/finca-kitchen.jpg";
-import facadeShutters from "@/assets/finca-facade-shutters.jpg";
+import bathroomStoneSink from "@/assets/finca-bathroom-stone-sink.jpg";
 import bathroomVanity from "@/assets/finca-bathroom-vanity.jpg";
 import bathroomTub from "@/assets/finca-bathroom-tub.jpg";
-import poolTerraceUmbrella from "@/assets/finca-pool-terrace-umbrella.jpg";
-import facadeCypress from "@/assets/finca-facade-cypress.jpg";
-import stairsPool from "@/assets/finca-stairs-pool.jpg";
-import poolMountainsReeds from "@/assets/finca-pool-mountains-reeds.jpg";
-import stoneCourtyard from "@/assets/finca-stone-courtyard.jpg";
 import bathroomShower from "@/assets/finca-bathroom-shower.jpg";
 
 export const Route = createFileRoute("/galerie")({
@@ -47,36 +36,32 @@ export const Route = createFileRoute("/galerie")({
   component: GaleriePage,
 });
 
-const images = [
-  { src: hero, alt: "Finca mit Pool", span: "row-span-2" },
-  { src: poolTerraceUmbrella, alt: "Pool­terrasse mit Sonnenschirm und Loungemöbeln", span: "row-span-2" },
-  { src: facadeCypress, alt: "Naturstein-Finca mit Zypressen vor blauem Himmel", span: "row-span-2" },
-  { src: stairsPool, alt: "Außentreppe mit Pool und Naturstein-Fassade", span: "row-span-2" },
-  { src: poolMountainsReeds, alt: "Pool mit Schilf, Zypressen und Bergblick", span: "" },
-  { src: stoneCourtyard, alt: "Innenhof mit Naturstein-Wand und Holzläden", span: "row-span-2" },
-  { src: bathroomShower, alt: "Badezimmer mit Steinwaschbecken und Dusche", span: "" },
-  { src: g1, alt: "Pool und Sonnenliegen", span: "row-span-2" },
-  { src: poolLoungers, alt: "Pool mit Sonnenliegen und Strohschirmen", span: "row-span-2" },
-  { src: exteriorPoolCypress, alt: "Naturstein-Finca mit Pool und Zypressen", span: "" },
-  { src: poolHouseEvening, alt: "Finca und Pool in Abendstimmung", span: "row-span-2" },
-  { src: kitchen, alt: "Voll ausgestattete Küche", span: "" },
-  { src: poolMountainView, alt: "Pool mit Blick auf die Berge", span: "" },
-  { src: facadeShutters, alt: "Hausfassade mit Holzläden", span: "row-span-2" },
-  { src: stoneEntrance, alt: "Hauseingang mit Natursteinfassade", span: "" },
-  { src: bedroomWoodBed, alt: "Schlafzimmer mit Holzbett", span: "row-span-2" },
-  { src: diningTableFireplace, alt: "Esstisch mit Kamin und Steinwand", span: "" },
-  { src: bathroomStoneSink, alt: "Badezimmer mit Steinwaschbecken", span: "" },
-  { src: bathroomVanity, alt: "Badezimmer mit Steinwaschtisch", span: "" },
-  { src: bathroomTub, alt: "Badezimmer mit Badewanne", span: "" },
-  { src: poolReeds, alt: "Pool mit Schilf und Sonnenliegen im Garten", span: "row-span-2" },
-  { src: g2, alt: "Sonnenliegen am Pool", span: "" },
-  { src: g3, alt: "Panoramablick mit Bergen", span: "" },
-  { src: g4, alt: "Garten und Pool", span: "" },
-  { src: g5, alt: "Hauseingang", span: "row-span-2" },
-  { src: g6, alt: "Schlafzimmer", span: "" },
-  { src: g7, alt: "Wohnzimmer mit Kamin", span: "" },
-  { src: g8, alt: "Badezimmer", span: "" },
-  { src: entrance, alt: "Einfahrt mit Tor", span: "" },
+type GalleryImage = {
+  src: string;
+  alt: string;
+  caption: string;
+  category: "Außen" | "Pool" | "Innen" | "Bad";
+};
+
+const images: GalleryImage[] = [
+  { src: hero, alt: "Pool und Naturstein-Finca", caption: "Pool & Finca", category: "Pool" },
+  { src: poolTerraceUmbrella, alt: "Pool­terrasse mit Sonnenschirm", caption: "Pool­terrasse", category: "Pool" },
+  { src: facadeCypress, alt: "Naturstein-Finca mit Zypressen", caption: "Fassade mit Zypressen", category: "Außen" },
+  { src: bedroomWoodBed, alt: "Schlafzimmer mit Massivholzbett", caption: "Schlafzimmer", category: "Innen" },
+  { src: stairsPool, alt: "Außentreppe mit Pool", caption: "Treppe & Pool", category: "Außen" },
+  { src: poolLoungers, alt: "Sonnenliegen am Pool mit Strohschirmen", caption: "Sonnenliegen", category: "Pool" },
+  { src: diningTableFireplace, alt: "Esstisch mit Kamin und Naturstein­wand", caption: "Esszimmer", category: "Innen" },
+  { src: poolMountainsReeds, alt: "Pool mit Schilf, Zypressen und Bergblick", caption: "Pool mit Bergblick", category: "Pool" },
+  { src: stoneCourtyard, alt: "Innenhof mit Naturstein-Wand und Holzläden", caption: "Innenhof", category: "Außen" },
+  { src: bathroomShower, alt: "Bad mit Steinwaschbecken und Dusche", caption: "Bad mit Dusche", category: "Bad" },
+  { src: kitchen, alt: "Voll ausgestattete Küche", caption: "Küche", category: "Innen" },
+  { src: poolMountainView, alt: "Pool mit Panorama-Bergblick", caption: "Panoramablick", category: "Pool" },
+  { src: facadeShutters, alt: "Hausfassade mit Holzläden", caption: "Holzläden", category: "Außen" },
+  { src: bathroomStoneSink, alt: "Badezimmer mit Steinwaschbecken", caption: "Steinwaschbecken", category: "Bad" },
+  { src: stoneEntrance, alt: "Hauseingang mit Natursteinfassade", caption: "Eingang", category: "Außen" },
+  { src: bathroomVanity, alt: "Badezimmer mit Steinwaschtisch", caption: "Waschtisch", category: "Bad" },
+  { src: bathroomTub, alt: "Badezimmer mit Badewanne", caption: "Badewanne", category: "Bad" },
+  { src: entrance, alt: "Einfahrt mit Tor 'Na Fideuera'", caption: "Einfahrt", category: "Außen" },
 ];
 
 function GaleriePage() {
@@ -84,22 +69,34 @@ function GaleriePage() {
     <Section>
       <div className="text-center mb-16">
         <p className="text-teal text-xs uppercase tracking-[0.3em] mb-4">Eindrücke</p>
-        <h1 className="text-4xl md:text-5xl text-foreground">Galerie</h1>
+        <h1 className="text-4xl md:text-5xl text-foreground mb-6">Galerie</h1>
+        <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
+          Pool, Terrassen, Wohnräume und Bäder — ein Blick auf die Finca Na Fideuera.
+        </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4">
+      {/* Masonry mit CSS columns – natürlich variierende Höhen */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 lg:gap-6 [column-fill:_balance]">
         {images.map((img, i) => (
-          <div
+          <figure
             key={i}
-            className={`relative overflow-hidden rounded-sm group ${img.span}`}
+            className="relative mb-4 lg:mb-6 break-inside-avoid overflow-hidden rounded-sm group bg-secondary/40"
           >
             <img
               src={img.src}
               alt={img.alt}
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
+              className="w-full h-auto block object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
             />
-          </div>
+            {/* Overlay mit Caption */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <figcaption className="absolute left-0 right-0 bottom-0 p-5 text-white translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+              <span className="block text-[0.65rem] uppercase tracking-[0.25em] text-teal-foreground/90 bg-teal/80 backdrop-blur-sm px-2 py-0.5 rounded-full w-fit mb-2">
+                {img.category}
+              </span>
+              <span className="block text-base font-medium drop-shadow">{img.caption}</span>
+            </figcaption>
+          </figure>
         ))}
       </div>
     </Section>
