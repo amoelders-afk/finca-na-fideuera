@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-pool.jpg";
 import entranceImg from "@/assets/finca-entrance.jpg";
-import kitchenImg from "@/assets/finca-kitchen.jpg";
+import poolTerraceImg from "@/assets/finca-pool-terrace-umbrella.jpg";
 import diningImg from "@/assets/finca-dining-table-fireplace.jpg";
 import artaImg from "@/assets/arta.jpg";
 import naturparkImg from "@/assets/naturpark.jpg";
@@ -175,8 +175,8 @@ function HomePage() {
             height={853}
           />
           <img
-            src={kitchenImg}
-            alt="Geräumige, voll ausgestattete Küche"
+            src={poolTerraceImg}
+            alt="Pool­terrasse mit Sonnenschirm und Loungemöbeln"
             className="w-full h-[320px] object-cover rounded-sm"
             loading="lazy"
             width={1280}
