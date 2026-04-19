@@ -16,6 +16,12 @@ import bathroomStoneSink from "@/assets/finca-bathroom-stone-sink.jpg";
 import bathroomVanity from "@/assets/finca-bathroom-vanity.jpg";
 import bathroomTub from "@/assets/finca-bathroom-tub.jpg";
 import bathroomShower from "@/assets/finca-bathroom-shower.jpg";
+import livingStoneWallTv from "@/assets/finca-living-stone-wall-tv.jpg";
+import terraceLoungersView from "@/assets/finca-terrace-loungers-view.jpg";
+import poolRocksReeds from "@/assets/finca-pool-rocks-reeds.jpg";
+import poolStrohschirm from "@/assets/finca-pool-strohschirm.jpg";
+import livingDiningOpen from "@/assets/finca-living-dining-open.jpg";
+import bedroomIronBed from "@/assets/finca-bedroom-iron-bed.jpg";
 
 export const Route = createFileRoute("/galerie")({
   head: () => ({
@@ -57,6 +63,12 @@ const images: GalleryImage[] = [
   { src: bathroomVanity, alt: "Badezimmer mit Steinwaschtisch", caption: "Waschtisch", category: "Bad" },
   { src: bathroomTub, alt: "Badezimmer mit Badewanne", caption: "Badewanne", category: "Bad" },
   { src: entrance, alt: "Einfahrt mit Tor 'Na Fideuera'", caption: "Einfahrt", category: "Außen" },
+  { src: livingStoneWallTv, alt: "Wohnzimmer mit Naturstein­wand und Smart-TV", caption: "Wohnbereich mit Steinwand", category: "Innen" },
+  { src: terraceLoungersView, alt: "Sonnenliegen auf der Terrasse mit Weitblick in die Hügel", caption: "Terrasse mit Aussicht", category: "Außen" },
+  { src: poolRocksReeds, alt: "Pool mit Felsformation und Schilfgürtel", caption: "Pool mit Felsen", category: "Pool" },
+  { src: poolStrohschirm, alt: "Pool mit Strohschirm und Liegen", caption: "Pool mit Strohschirm", category: "Pool" },
+  { src: livingDiningOpen, alt: "Offener Wohn- und Essbereich mit Holzbalkendecke", caption: "Wohn- und Essbereich", category: "Innen" },
+  { src: bedroomIronBed, alt: "Schlafzimmer mit schmiede­eisernem Bett und Gartenblick", caption: "Schlafzimmer mit Gartenblick", category: "Innen" },
 ];
 
 function GaleriePage() {
