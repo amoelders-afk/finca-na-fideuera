@@ -116,7 +116,7 @@ function DatenschutzPage() {
 
           <section>
             <h2 className="text-2xl mb-3 text-teal">
-              8. Ihre Rechte
+              7. Ihre Rechte
             </h2>
             <p>
               Sie haben jederzeit das Recht auf Auskunft, Berichtigung,
@@ -132,7 +132,7 @@ function DatenschutzPage() {
 
           <section>
             <h2 className="text-2xl mb-3 text-teal">
-              9. Cookies & Tracking
+              8. Cookies & Tracking
             </h2>
             <p>
               Diese Website verwendet keine Tracking-Cookies und keine
@@ -142,7 +142,7 @@ function DatenschutzPage() {
 
           <section>
             <h2 className="text-2xl mb-3 text-teal">
-              10. Hosting
+              9. Hosting
             </h2>
             <p>
               Diese Website wird auf Servern unseres Hosting-Anbieters
