@@ -73,7 +73,7 @@ export const template = {
   subject: (data: Record<string, any>) =>
     `Neue Anfrage von ${data.name || 'Gast'} — Finca Na Fideuera`,
   displayName: 'Kontaktformular-Anfrage',
-  to: 'buchung@finca-na-fideuera.de',
+  to: 'sarah.hofer0608@gmail.com',
   previewData: {
     name: 'Max Mustermann',
     email: 'max@example.com',
