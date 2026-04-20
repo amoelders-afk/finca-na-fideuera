@@ -32,6 +32,7 @@ function DatenschutzPage() {
               Ulrich Moelders<br />
               Finca Na Fideuera<br />
               Polygon 17, Parzelle-la 125, Camí Son Boyet<br />
+              07570 Artà, Mallorca, Spanien<br />
               E-Mail: sarah.hofer0608@gmail.com
             </p>
           </section>
