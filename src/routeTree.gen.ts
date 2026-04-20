@@ -9,6 +9,8 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as PreiseRouteImport } from './routes/preise'
 import { Route as LocationRouteImport } from './routes/location'
 import { Route as KontaktRouteImport } from './routes/kontakt'
@@ -25,6 +27,16 @@ import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lova
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PreiseRoute = PreiseRouteImport.update({
   id: '/preise',
   path: '/preise',
@@ -113,6 +125,8 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/availability': typeof ApiAvailabilityRoute
   '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -130,6 +144,8 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/availability': typeof ApiAvailabilityRoute
   '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -148,6 +164,8 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/location': typeof LocationRoute
   '/preise': typeof PreiseRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/availability': typeof ApiAvailabilityRoute
   '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -167,6 +185,8 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/location'
     | '/preise'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/api/availability'
     | '/api/contact'
     | '/email/unsubscribe'
@@ -184,6 +204,8 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/location'
     | '/preise'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/api/availability'
     | '/api/contact'
     | '/email/unsubscribe'
@@ -201,6 +223,8 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/location'
     | '/preise'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/api/availability'
     | '/api/contact'
     | '/email/unsubscribe'
@@ -219,6 +243,8 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   LocationRoute: typeof LocationRoute
   PreiseRoute: typeof PreiseRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiAvailabilityRoute: typeof ApiAvailabilityRoute
   ApiContactRoute: typeof ApiContactRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
@@ -230,6 +256,20 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/preise': {
       id: '/preise'
       path: '/preise'
@@ -347,6 +387,8 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   LocationRoute: LocationRoute,
   PreiseRoute: PreiseRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiAvailabilityRoute: ApiAvailabilityRoute,
   ApiContactRoute: ApiContactRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
