@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Willkommen auf der Finca Na Fideuera. Exklusive Ferienfinca im Naturschutzgebiet bei Artà mit privatem Pool, 4 Schlafzimmern und 32.000 m² Grundstück.",
+          "Exklusive Finca auf Mallorca mieten – 220 m², 4 Schlafzimmer, 60 m² Pool, inmitten eines Naturschutzgebietes in Artà. Jetzt anfragen!",
       },
       { property: "og:title", content: "Finca Na Fideuera — Wohlfühlfinca auf Mallorca" },
       {
