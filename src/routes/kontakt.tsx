@@ -11,7 +11,7 @@ export const Route = createFileRoute("/kontakt")({
       {
         name: "description",
         content:
-          "Kontaktieren Sie die Finca Na Fideuera für eine unverbindliche Anfrage. E-Mail: sarah.hofer0608@gmail.com.",
+          "Kontaktieren Sie uns für Buchungsanfragen und Informationen zur Finca Na Fideuera auf Mallorca. Wir freuen uns auf Ihre Anfrage!",
       },
       { property: "og:title", content: "Kontakt — Finca Na Fideuera" },
       { property: "og:description", content: "Unverbindliche Anfrage stellen." },

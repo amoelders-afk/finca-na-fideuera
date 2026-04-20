@@ -9,7 +9,7 @@ export const Route = createFileRoute("/preise")({
       {
         name: "description",
         content:
-          "Preiskatalog der Finca Na Fideuera. Übernachtungspreise nach Saison und Anzahl Schlafzimmer. Nebensaison ab 270 €, Hauptsaison ab 350 €.",
+          "Finca Na Fideuera Mallorca mieten – Preise und Verfügbarkeiten. Ohne Kaution, Endreinigung inklusive. Jetzt anfragen!",
       },
       { property: "og:title", content: "Preise — Finca Na Fideuera" },
       { property: "og:description", content: "Übernachtungspreise nach Saison." },
