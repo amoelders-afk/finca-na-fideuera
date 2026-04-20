@@ -31,8 +31,9 @@ function DatenschutzPage() {
             <p className="mt-3">
               Ulrich Moelders<br />
               Finca Na Fideuera<br />
-              Polygon 17, Parzelle-la 125, Camí Son Boyet<br />
-              07570 Son Servera, Spanien<br />
+              Camí Son Boyet, Polígono 17, Parcela 125<br />
+              07570 Son Servera<br />
+              Illes Balears, Spanien<br />
               E-Mail: sarah.hofer0608@gmail.com
             </p>
           </section>
