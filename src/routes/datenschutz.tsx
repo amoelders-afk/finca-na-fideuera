@@ -71,9 +71,14 @@ function DatenschutzPage() {
               4. Speicherdauer
             </h2>
             <p>
-              Ihre Daten werden gelöscht, sobald sie für die Erreichung des
-              Zwecks ihrer Erhebung nicht mehr erforderlich sind, spätestens
-              jedoch nach Ablauf gesetzlicher Aufbewahrungspflichten.
+              Anfragen aus dem Kontaktformular werden gelöscht, sobald die
+              Bearbeitung abgeschlossen ist und keine weitere Kommunikation
+              mehr erforderlich ist – in der Regel spätestens 6 Monate nach
+              dem letzten Kontakt. Bei einer zustande gekommenen Buchung
+              werden die Daten gemäß den gesetzlichen Aufbewahrungspflichten
+              (handels- und steuerrechtlich bis zu 10 Jahre) gespeichert.
+              Server-Logfiles unseres Hosting-Anbieters werden nach
+              spätestens 30 Tagen automatisch gelöscht.
             </p>
           </section>
 
@@ -145,10 +150,23 @@ function DatenschutzPage() {
               9. Hosting
             </h2>
             <p>
-              Diese Website wird auf Servern unseres Hosting-Anbieters
-              betrieben. Beim Aufruf werden technische Daten wie IP-Adresse,
-              Browsertyp und Zugriffszeitpunkt zur Sicherstellung des
-              Betriebs verarbeitet.
+              Diese Website wird gehostet von Cloudflare, Inc., 101 Townsend
+              Street, San Francisco, CA 94107, USA (für die EU vertreten
+              durch Cloudflare Germany GmbH, Rosental 7, c/o Mindspace,
+              80331 München). Beim Aufruf der Website werden technische
+              Daten wie IP-Adresse, Browsertyp, Betriebssystem, Referrer-URL
+              und Zugriffszeitpunkt verarbeitet, um den Betrieb, die
+              Sicherheit und die Auslieferung der Inhalte zu gewährleisten
+              (Art. 6 Abs. 1 lit. f DSGVO).
+            </p>
+            <p className="mt-3">
+              Mit Cloudflare besteht ein Auftragsverarbeitungsvertrag gemäß
+              Art. 28 DSGVO. Datenübermittlungen in die USA erfolgen auf
+              Grundlage der Standardvertragsklauseln der EU-Kommission sowie
+              der Zertifizierung nach dem EU-US Data Privacy Framework.
+              Server-Logs werden spätestens nach 30 Tagen gelöscht. Weitere
+              Informationen finden Sie in der{" "}
+              <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer" className="underline hover:text-teal">Datenschutzerklärung von Cloudflare</a>.
             </p>
           </section>
         </div>
