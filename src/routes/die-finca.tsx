@@ -9,7 +9,7 @@ export const Route = createFileRoute("/die-finca")({
       {
         name: "description",
         content:
-          "Detaillierte Informationen zur Finca Na Fideuera: 220 m² Wohnfläche, 4 Schlafzimmer, privater Pool, voll ausgestattet für bis zu 8 Personen.",
+          "Entdecken Sie die Finca Na Fideuera – eine typisch mallorquinische Natursteinfinca mit 32.000 m² Areal, 3 Terrassen und idyllischer Atmosphäre in Artà.",
       },
       { property: "og:title", content: "Die Finca — Finca Na Fideuera" },
       { property: "og:description", content: "220 m² Wohnfläche, 4 Schlafzimmer, privater 60 m² Pool." },
