@@ -30,7 +30,7 @@ export const Route = createFileRoute("/galerie")({
       {
         name: "description",
         content:
-          "Bildergalerie der Finca Na Fideuera auf Mallorca. Pool, Terrasse, Innenräume und Umgebung.",
+          "Bilder der Finca Na Fideuera auf Mallorca – Pool, Terrassen, Schlafzimmer, Küche und die wunderschöne Umgebung in Artà.",
       },
       { property: "og:title", content: "Galerie — Finca Na Fideuera" },
       { property: "og:description", content: "Eindrücke von der Finca." },
