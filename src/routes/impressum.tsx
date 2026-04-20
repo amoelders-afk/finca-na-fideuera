@@ -5,7 +5,7 @@ export const Route = createFileRoute("/impressum")({
   head: () => ({
     meta: [
       { title: "Impressum — Finca Na Fideuera" },
-      { name: "description", content: "Impressum der Finca Na Fideuera." },
+      { name: "description", content: "Impressum der Finca Na Fideuera – Angaben gemäß § 5 TMG." },
       { name: "robots", content: "noindex" },
     ],
   }),
