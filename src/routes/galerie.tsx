@@ -14,7 +14,7 @@ import diningTableFireplace from "@/assets/finca-dining-table-fireplace.jpg";
 import kitchen from "@/assets/finca-kitchen.jpg";
 import bathroomStoneSink from "@/assets/finca-bathroom-stone-sink.jpg";
 import bathroomVanity from "@/assets/finca-bathroom-vanity.jpg";
-import bathroomTub from "@/assets/finca-bathroom-tub.jpg";
+
 import bathroomShower from "@/assets/finca-bathroom-shower.jpg";
 import livingStoneWallTv from "@/assets/finca-living-stone-wall-tv.jpg";
 import terraceLoungersView from "@/assets/finca-terrace-loungers-view.jpg";
@@ -61,7 +61,7 @@ const images: GalleryImage[] = [
   { src: bathroomStoneSink, alt: "Badezimmer mit Steinwaschbecken", caption: "Steinwaschbecken", category: "Bad" },
   { src: stoneEntrance, alt: "Hauseingang mit Natursteinfassade", caption: "Eingang", category: "Außen" },
   { src: bathroomVanity, alt: "Badezimmer mit Steinwaschtisch", caption: "Waschtisch", category: "Bad" },
-  { src: bathroomTub, alt: "Badezimmer mit Badewanne", caption: "Badewanne", category: "Bad" },
+  
   { src: entrance, alt: "Einfahrt mit Tor 'Na Fideuera'", caption: "Einfahrt", category: "Außen" },
   { src: livingStoneWallTv, alt: "Wohnzimmer mit Naturstein­wand und Smart-TV", caption: "Wohnbereich mit Steinwand", category: "Innen" },
   { src: terraceLoungersView, alt: "Sonnenliegen auf der Terrasse mit Weitblick in die Hügel", caption: "Terrasse mit Aussicht", category: "Außen" },
