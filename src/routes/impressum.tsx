@@ -23,7 +23,7 @@ function ImpressumPage() {
           <Row label="Lizenznummer" value="ET/2152" />
           <Row label="Spanische Steuernummer" value="Y1829912-T" />
           <Row label="Wohneinheiten" value="3 Wohneinheiten, 6 Plätze" />
-          <Row label="Adresse" value="Polygon 17, Parzelle-la 125, Camí Son Boyet" />
+          <Row label="Adresse" value="Polygon 17, Parzelle-la 125, Camí Son Boyet, 07570 Artà, Mallorca, Spanien" />
           <Row label="Kontakt" value="sarah.hofer0608@gmail.com" />
         </dl>
       </div>

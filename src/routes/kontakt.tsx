@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
@@ -139,6 +139,14 @@ function KontaktPage() {
                 className="input-base resize-none"
               />
             </Field>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Mit dem Absenden des Formulars stimmen Sie der Verarbeitung
+              Ihrer Angaben zur Bearbeitung Ihrer Anfrage gemäß unserer{" "}
+              <Link to="/datenschutz" className="underline hover:text-teal">
+                Datenschutzerklärung
+              </Link>{" "}
+              zu.
+            </p>
             <button
               type="submit"
               disabled={submitting}
