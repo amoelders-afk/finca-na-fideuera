@@ -55,7 +55,7 @@ const images: GalleryImage[] = [
   { src: poolLoungers, alt: "Sonnenliegen am Pool mit Strohschirmen", caption: "Sonnenliegen", category: "Pool" },
   { src: diningTableFireplace, alt: "Esstisch mit Kamin und Naturstein­wand", caption: "Esszimmer", category: "Innen" },
   { src: poolMountainsReeds, alt: "Pool mit Schilf, Zypressen und Bergblick", caption: "Pool mit Bergblick", category: "Pool" },
-  { src: stoneCourtyard, alt: "Innenhof mit Naturstein-Wand und Holzläden", caption: "Innenhof", category: "Außen" },
+  
   { src: bathroomShower, alt: "Bad mit Steinwaschbecken und Dusche", caption: "Bad mit Dusche", category: "Bad" },
   { src: kitchen, alt: "Voll ausgestattete Küche", caption: "Küche", category: "Innen" },
   { src: facadeShutters, alt: "Hausfassade mit Holzläden", caption: "Holzläden", category: "Außen" },
