@@ -9,7 +9,7 @@ export const Route = createFileRoute("/location")({
       {
         name: "description",
         content:
-          "Die Finca Na Fideuera liegt 5 Minuten von Artà entfernt, im Nordosten Mallorcas. Naturstrände, Restaurants, Golfplätze und Naturschutzgebiete in direkter Nähe.",
+          "Die Finca Na Fideuera liegt inmitten der Natur bei Artà, Mallorca – nahe Cala Rajada, Cala Mesquida, Naturpark und Golfplatz Capdepera.",
       },
       { property: "og:title", content: "Location — Finca Na Fideuera" },
       { property: "og:description", content: "Idyllisch gelegen bei Artà im Nordosten Mallorcas." },
