@@ -22,6 +22,7 @@ import poolRocksReeds from "@/assets/finca-pool-rocks-reeds.jpg";
 import poolStrohschirm from "@/assets/finca-pool-strohschirm.jpg";
 import livingDiningOpen from "@/assets/finca-living-dining-open.jpg";
 import bedroomIronBed from "@/assets/finca-bedroom-iron-bed.jpg";
+import poolStrohschirmRocks from "@/assets/finca-pool-strohschirm-rocks.jpg";
 
 export const Route = createFileRoute("/galerie")({
   head: () => ({
@@ -69,6 +70,7 @@ const images: GalleryImage[] = [
   { src: poolStrohschirm, alt: "Pool mit Strohschirm und Liegen", caption: "Pool mit Strohschirm", category: "Pool" },
   { src: livingDiningOpen, alt: "Offener Wohn- und Essbereich mit Holzbalkendecke", caption: "Wohn- und Essbereich", category: "Innen" },
   { src: bedroomIronBed, alt: "Schlafzimmer mit schmiede­eisernem Bett und Gartenblick", caption: "Schlafzimmer mit Gartenblick", category: "Innen" },
+  { src: poolStrohschirmRocks, alt: "Pool mit Felsen, Schilf und Strohschirm unter blauem Himmel", caption: "Pool mit Strohschirm & Felsen", category: "Pool" },
 ];
 
 function GaleriePage() {
