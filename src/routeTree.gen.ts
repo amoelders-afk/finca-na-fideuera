@@ -19,6 +19,7 @@ import { Route as GalerieRouteImport } from './routes/galerie'
 import { Route as DieFincaRouteImport } from './routes/die-finca'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HooksWeeklyReportRouteImport } from './routes/hooks/weekly-report'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 import { Route as ApiAvailabilityRouteImport } from './routes/api/availability'
@@ -77,6 +78,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HooksWeeklyReportRoute = HooksWeeklyReportRouteImport.update({
+  id: '/hooks/weekly-report',
+  path: '/hooks/weekly-report',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EmailUnsubscribeRoute = EmailUnsubscribeRouteImport.update({
   id: '/email/unsubscribe',
   path: '/email/unsubscribe',
@@ -130,6 +136,7 @@ export interface FileRoutesByFullPath {
   '/api/availability': typeof ApiAvailabilityRoute
   '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/hooks/weekly-report': typeof HooksWeeklyReportRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -149,6 +156,7 @@ export interface FileRoutesByTo {
   '/api/availability': typeof ApiAvailabilityRoute
   '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/hooks/weekly-report': typeof HooksWeeklyReportRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -169,6 +177,7 @@ export interface FileRoutesById {
   '/api/availability': typeof ApiAvailabilityRoute
   '/api/contact': typeof ApiContactRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
+  '/hooks/weekly-report': typeof HooksWeeklyReportRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
@@ -190,6 +199,7 @@ export interface FileRouteTypes {
     | '/api/availability'
     | '/api/contact'
     | '/email/unsubscribe'
+    | '/hooks/weekly-report'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
@@ -209,6 +219,7 @@ export interface FileRouteTypes {
     | '/api/availability'
     | '/api/contact'
     | '/email/unsubscribe'
+    | '/hooks/weekly-report'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
@@ -228,6 +239,7 @@ export interface FileRouteTypes {
     | '/api/availability'
     | '/api/contact'
     | '/email/unsubscribe'
+    | '/hooks/weekly-report'
     | '/lovable/email/suppression'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
@@ -248,6 +260,7 @@ export interface RootRouteChildren {
   ApiAvailabilityRoute: typeof ApiAvailabilityRoute
   ApiContactRoute: typeof ApiContactRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
+  HooksWeeklyReportRoute: typeof HooksWeeklyReportRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
   LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
@@ -326,6 +339,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hooks/weekly-report': {
+      id: '/hooks/weekly-report'
+      path: '/hooks/weekly-report'
+      fullPath: '/hooks/weekly-report'
+      preLoaderRoute: typeof HooksWeeklyReportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/email/unsubscribe': {
       id: '/email/unsubscribe'
       path: '/email/unsubscribe'
@@ -392,6 +412,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiAvailabilityRoute: ApiAvailabilityRoute,
   ApiContactRoute: ApiContactRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
+  HooksWeeklyReportRoute: HooksWeeklyReportRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
   LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
