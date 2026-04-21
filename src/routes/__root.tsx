@@ -3,6 +3,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { PageViewTracker } from "@/components/page-view-tracker";
 
 function NotFoundComponent() {
   return (
@@ -85,6 +86,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <PageViewTracker />
       <SiteHeader />
       <main className="flex-1">
         <Outlet />
