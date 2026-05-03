@@ -80,8 +80,7 @@ function KontaktPage() {
           <div className="mb-12 bg-background text-foreground rounded-sm p-8 md:p-10 text-center">
             <h2 className="text-2xl md:text-3xl mb-3">Buchungen für 2027</h2>
             <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              Für 2026 sind keine Termine mehr verfügbar. Gerne nehmen wir
-              jetzt schon Anfragen für die Saison 2027 entgegen.
+              Gerne nehmen wir jetzt schon Anfragen für die Saison 2027 entgegen.
             </p>
           </div>
 
